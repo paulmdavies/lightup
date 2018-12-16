@@ -7,96 +7,96 @@ class SquareTest extends FlatSpec with Matchers {
     "A black square" should "be black" in {
         val square = Square.black()
 
-        square.isBlack() should be (true)
+        square.isBlack() should be(true)
     }
 
     it should "not be white" in {
         val square = Square.black()
 
-        square.isWhite() should be (false)
+        square.isWhite() should be(false)
     }
 
     it should "not have a value" in {
         val square = Square.black()
 
-        square.getValue() should be (Option.empty)
+        square.getValue() should be(Option.empty)
     }
 
     it should "not have a light" in {
         val square = Square.black()
 
-        square.hasLight() should be (false)
+        square.hasLight() should be(false)
     }
 
     "A black square with a value" should "be black" in {
         val square = Square.black(ANY_SQUARE_VALUE)
 
-        square.isBlack() should be (true)
+        square.isBlack() should be(true)
     }
 
     it should "not be white" in {
         val square = Square.black(ANY_SQUARE_VALUE)
 
-        square.isWhite() should be (false)
+        square.isWhite() should be(false)
     }
 
     it should "not have a value" in {
         val square = Square.black(ANY_SQUARE_VALUE)
 
-        square.getValue() should be (Option(1))
+        square.getValue() should be(Option(1))
     }
 
     it should "not have a light" in {
         val square = Square.black(ANY_SQUARE_VALUE)
 
-        square.hasLight() should be (false)
+        square.hasLight() should be(false)
     }
 
     "An unlit white square" should "not be black" in {
         val square = Square.white()
 
-        square.isBlack() should be (false)
+        square.isBlack() should be(false)
     }
 
     it should "be white" in {
         val square = Square.white()
 
-        square.isWhite() should be (true)
+        square.isWhite() should be(true)
     }
 
     it should "not have a value" in {
         val square = Square.white()
 
-        square.getValue() should be (Option.empty)
+        square.getValue() should be(Option.empty)
     }
 
     it should "not have a light" in {
         val square = Square.white()
 
-        square.hasLight() should be (false)
+        square.hasLight() should be(false)
     }
 
     "An lit white square" should "not be black" in {
         val square = Square.white(true)
 
-        square.isBlack() should be (false)
+        square.isBlack() should be(false)
     }
 
     it should "be white" in {
         val square = Square.white(true)
 
-        square.isWhite() should be (true)
+        square.isWhite() should be(true)
     }
 
     it should "not have a value" in {
         val square = Square.white(true)
 
-        square.getValue() should be (Option.empty)
+        square.getValue() should be(Option.empty)
     }
 
     it should "have a light" in {
         val square = Square.white(true)
 
-        square.hasLight() should be (true)
+        square.hasLight() should be(true)
     }
 }
