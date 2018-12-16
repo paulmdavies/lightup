@@ -1,4 +1,4 @@
-class Square private (value: Int) {
+case class Square private (value: Int) {
     def getValue() : Option[Int] = value > 0 match {
         case true => Some(value)
         case false => Option.empty
