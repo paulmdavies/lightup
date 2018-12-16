@@ -10,11 +10,11 @@ class GridTest extends FlatSpec with Matchers {
         Grid(List(List(Square.black()))).isComplete() should be (true)
     }
 
-    it should "not be complete if it contains unlit white squares" in {
+    it should "not be complete if it contains white squares without lights" in {
         Grid(List(List(Square.white()))).isComplete() should be (false)
     }
 
-    it should "be complete if it contains only lit white squares" in {
+    it should "be complete if it contains only white squares with lights" in {
         Grid(List(List(Square.white(true)))).isComplete() should be (true)
     }
 }

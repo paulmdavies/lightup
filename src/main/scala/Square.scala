@@ -8,13 +8,13 @@ class Square private (value: Int) {
 
     def isBlack() : Boolean = value >= Square.BLACK_SQUARE
 
-    def isLit() : Boolean = value == Square.LIT_WHITE_SQUARE
+    def hasLight() : Boolean = value == Square.LIGHT_SQUARE
 }
 
 object Square {
     private val BLACK_SQUARE = 0
     private val WHITE_SQUARE = -1
-    private val LIT_WHITE_SQUARE = -2
+    private val LIGHT_SQUARE = -2
 
     def black(value: Int)= new Square(value)
 
@@ -23,7 +23,7 @@ object Square {
     def white() = new Square(WHITE_SQUARE)
 
     def white(lit: Boolean = false) = new Square(lit match {
-        case true => LIT_WHITE_SQUARE
+        case true => LIGHT_SQUARE
         case false => WHITE_SQUARE
     })
 }

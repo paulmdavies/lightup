@@ -22,10 +22,10 @@ class SquareTest extends FlatSpec with Matchers {
         square.getValue() should be (Option.empty)
     }
 
-    it should "not be lit" in {
+    it should "not have a light" in {
         val square = Square.black()
 
-        square.isLit() should be (false)
+        square.hasLight() should be (false)
     }
 
     "A black square with a value" should "be black" in {
@@ -46,10 +46,10 @@ class SquareTest extends FlatSpec with Matchers {
         square.getValue() should be (Option(1))
     }
 
-    it should "not be lit" in {
+    it should "not have a light" in {
         val square = Square.black(ANY_SQUARE_VALUE)
 
-        square.isLit() should be (false)
+        square.hasLight() should be (false)
     }
 
     "An unlit white square" should "not be black" in {
@@ -70,10 +70,10 @@ class SquareTest extends FlatSpec with Matchers {
         square.getValue() should be (Option.empty)
     }
 
-    it should "not be lit" in {
+    it should "not have a light" in {
         val square = Square.white()
 
-        square.isLit() should be (false)
+        square.hasLight() should be (false)
     }
 
     "An lit white square" should "not be black" in {
@@ -94,9 +94,9 @@ class SquareTest extends FlatSpec with Matchers {
         square.getValue() should be (Option.empty)
     }
 
-    it should "be lit" in {
+    it should "have a light" in {
         val square = Square.white(true)
 
-        square.isLit() should be (true)
+        square.hasLight() should be (true)
     }
 }
