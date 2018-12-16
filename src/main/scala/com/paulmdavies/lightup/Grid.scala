@@ -1,3 +1,5 @@
+package com.paulmdavies.lightup
+
 case class Grid(squares: List[List[Square]]) {
     def isComplete(): Boolean = {
         squares.zipWithIndex.forall {

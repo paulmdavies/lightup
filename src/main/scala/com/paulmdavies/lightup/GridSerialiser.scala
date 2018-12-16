@@ -1,3 +1,5 @@
+package com.paulmdavies.lightup
+
 object GridSerialiser {
     def deserialise(gridText: String) : Grid = {
         new Grid(gridText.trim().split("\n").map(_.trim.split("").map{

@@ -1,3 +1,5 @@
+package com.paulmdavies.lightup
+
 case class Square private (value: Int) {
     def getValue() : Option[Int] = value > 0 match {
         case true => Some(value)

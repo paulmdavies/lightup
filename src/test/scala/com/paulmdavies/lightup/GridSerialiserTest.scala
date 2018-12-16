@@ -1,3 +1,5 @@
+package com.paulmdavies.lightup
+
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
 
